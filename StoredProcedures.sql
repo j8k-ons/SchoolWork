@@ -1,0 +1,19 @@
+/* Stored Procedures */
+
+CREATE PROCEDURE spVendorSales @VCODE INT
+AS 
+DECLARE @VNAME VARCHAR(50), @UNITSSOLD INT; 
+BEGIN
+	SELECT @VNAME = v_name, 
+		   @UNITSSOLD = SUM(Line_Units)
+	FROM VENDOR 
+		LEFT JOIN PRODUCT ON VENDOR.V_CODE = PRODUCT.V_CODE 
+		LEFT JOIN LINE ON PRODUCT.P_CODE = LINE.P_CODE
+	WHERE VENDOR.V_CODE = @VCODE
+	GROUP BY V_NAME; 
+	PRINT CONCAT('Vendor ', @VNAME, ' has sold a total of ', @UNITSSOLD, ' units of products.'); 
+
+END; 
+
+EXEC spVendorSales @VCODE = 25595; 
+
