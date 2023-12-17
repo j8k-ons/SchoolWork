@@ -138,7 +138,7 @@ SELECT B.BOOK_NUM
 FROM FACT.BOOK B
 WHERE B.BOOK_YEAR = '2021'; 
 
-/* 19.  Write a query to display the book number, title and year of publication for all books in the ìDatabaseî subject */
+/* 19.  Write a query to display the book number, title and year of publication for all books in the ‚ÄúDatabase‚Äù subject */
 
 SELECT B.BOOK_NUM
 	, B.BOOK_TITLE
@@ -370,7 +370,7 @@ GROUP BY C.BOOK_NUM
 ORDER BY 'Times Checked Out' DESC; 
 
 /* 43.  Write a query to display the author ID, first and last name, book number, and book
-title of all books in the subject ìCloudî. Sort the results by book title and then
+title of all books in the subject ‚ÄúCloud‚Äù. Sort the results by book title and then
 by author last name. */ 
 
 SELECT W.AU_ID
@@ -441,7 +441,7 @@ ORDER BY
 
 /* 47.  Write a query to display the author ID, first name, last name, the number of books
 written by that author, and the average cost of those books. Limit the results to
-include only books that are on the subjects ìCloudî and ìProgrammingî. Also, limit
+include only books that are on the subjects ‚ÄúCloud‚Äù and ‚ÄúProgramming‚Äù. Also, limit
 the results to only authors that have written more than one book in those subjects.
 Sort the results by the number of books written in descending order and then in
 ascending order by average cost, and then in ascending order by author last name. */
@@ -464,7 +464,7 @@ ORDER BY WRITTEN.[Books Written] DESC, WRITTEN.[Average Cost], WRITTEN.AU_LNAME
 
 /* 48.  Write a query to display the author ID, author last name, book title, checkout
 date, and patron last name for all the books written by authors with the last name
-ìBruerî that have ever been checked out by patrons with the last name ìMilesî */
+‚ÄúBruer‚Äù that have ever been checked out by patrons with the last name ‚ÄúMiles‚Äù */
 
 SELECT W.AU_ID
 	, A.AU_LNAME
@@ -556,7 +556,7 @@ WHERE B.BOOK_NUM NOT IN (SELECT C.BOOK_NUM FROM FACT.CHECKOUT C)
 ORDER BY B.BOOK_TITLE; 
 
 /* 56. Write a query to display the author ID, first and last name for all authors that
-have never written a book with the subject ìProgrammingî. Sort the results by
+have never written a book with the subject ‚ÄúProgramming‚Äù. Sort the results by
 author last name. */ 
 
 SELECT DISTINCT A.AU_ID, A.AU_FNAME, A.AU_LNAME
@@ -567,7 +567,7 @@ ORDER BY A.AU_LNAME
 
 
 /* 57. Write a query to display the book number, title, subject, average cost of books
-within that subject, and the difference between each bookís cost and the average
+within that subject, and the difference between each book‚Äôs cost and the average
 cost of books in that subject. Sort the results by book title */ 
 
 SELECT B.BOOK_NUM, B.BOOK_TITLE, B.BOOK_SUBJECT, FORMAT(SUBJECTCOST.[Average Subject Cost],'C') AS 'Avg Subj Cost', FORMAT(B.BOOK_COST - SUBJECTCOST.[Average Subject Cost], 'C')  AS 'DIFFERENCE'
@@ -579,7 +579,7 @@ JOIN FACT.BOOK B ON B.BOOK_SUBJECT = SUBJECTCOST.BOOK_SUBJECT
 ORDER BY B.BOOK_TITLE; 
 
 /* 58.  Write a query to display the book number, title, subject, author last name, and the
-number of books written by that author. Limit the results to books in the ìCloudî
+number of books written by that author. Limit the results to books in the ‚ÄúCloud‚Äù
 subject. Sort the results by book title and then author last name */ 
 
 
