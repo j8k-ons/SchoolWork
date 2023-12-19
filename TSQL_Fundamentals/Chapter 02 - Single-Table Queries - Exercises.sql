@@ -2,7 +2,7 @@
 -- Microsoft SQL Server T-SQL Fundamentals
 -- Chapter 02 - Single-Table Queries
 -- Exercises
--- © Itzik Ben-Gan 
+-- Â© Itzik Ben-Gan 
 -- Jacob Owens 12/23 Taken after learning to code in 2023
 ---------------------------------------------------------------------
 
