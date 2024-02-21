@@ -1,2 +1,5 @@
 # SchoolWork
-Placing all of my school code here 
+INFS 5790 - Database Design and Implementation
+BIA 6920 - Predictive Analytics
+BIA 6910 - Data Visualizations
+
